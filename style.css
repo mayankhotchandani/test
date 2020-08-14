@@ -103,16 +103,11 @@ html {
   text-align: center;
 }
 .game-timer {
-  min-width: 58px;
-  min-height: 58px;
-  background-color: white;
-  color: black;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  border: 1px solid black;
+  position: absolute;
+  top: 36vh;
+  font-size: 1.6em;
+  margin-top: 4px;
+  font-weight: bold;
 }
 
 .opt {
@@ -191,22 +186,54 @@ html {
   .time {
     font-size: 1.4em;
   }
-  .game-timer {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.4em;
-    border: 1px solid black;
-  }
+
   #question {
     font-size: 1.2rem;
   }
   .option-display {
     font-size: 1em;
+  }
+}
+
+#countdown {
+  position: relative;
+  margin: auto;
+
+  height: 70px;
+  width: 70px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: transparent;
+  display: inline-block;
+  line-height: 40px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 156px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: rgb(13, 201, 69);
+  fill: none;
+  animation: countdown 20s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 156px;
   }
 }

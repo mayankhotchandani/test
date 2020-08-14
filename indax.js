@@ -208,3 +208,14 @@ function nextQuestion() {
   return (gameTime = 0);
 }
 // add a button that fires this function in the results div
+
+var countdownNumberEl = document.getElementById("countdown-number");
+var countdown = 20;
+
+countdownNumberEl.textContent = countdown;
+
+setInterval(function () {
+  countdown = --countdown <= 0 ? 20 : countdown;
+
+  countdownNumberEl.textContent = countdown;
+}, 1000);
