@@ -1,0 +1,253 @@
+.nav-tabs {
+  width: 80vw;
+  margin: 0px 10vw;
+  display: flex;
+  box-sizing: border-box;
+
+  overflow-x: auto;
+}
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.nav {
+  color: grey;
+  /* width: 100px;
+    height: 50px; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  /* margin: 10px; */
+  background: rgb(255, 254, 254);
+  text-decoration: none;
+}
+
+.info {
+  display: none;
+  margin: 0 4%;
+  display: flex;
+}
+
+.m {
+  visibility: hidden;
+  width: 1px;
+}
+.swipe {
+  float: right;
+  color: grey;
+}
+@media only screen and (min-width: 500px) {
+  .swipe {
+    display: none;
+  }
+  .nav-tabs {
+    justify-content: space-evenly;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #272727;
+  font-family: "Quicksand", serif;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin: 0px;
+}
+
+img {
+  width: 100%;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95vw;
+  list-style: none;
+
+  overflow: visible;
+  padding: 0;
+  align-items: center;
+  margin-top: 0px;
+  margin: 0px 9vw;
+}
+
+.cards .cards_item {
+  width: 22rem;
+  display: flex;
+  padding: 1rem;
+  background-color: white;
+  margin-top: 100px;
+  border-radius: 0.3em;
+}
+.cards .cards_item .card {
+  background-color: white;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 0 10px rgb(145, 145, 145);
+  box-shadow: 0 0 10px rgb(145, 145, 145);
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  justify-content: center;
+  background-color: rgb(11, 187, 90);
+}
+
+.cards .cards_item .card .card_image {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  border-radius: 0.3rem;
+}
+
+.cards .cards_item .card .card_content {
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-1.5rem);
+  display: flex;
+  flex-direction: row;
+}
+
+.cards .cards_item .card .card_content .card_text {
+  color: #3a3838;
+  font-size: 14.8px;
+  line-height: 1.44;
+  font-weight: 400;
+  padding: 8px;
+  /* letter-spacing: 0.3px; */
+  text-align: start;
+}
+
+.cards .cards_item .card .card_content .btn {
+  padding: 0.6rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: #1d1c1c;
+  background-color: lightblue;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  align-self: flex-end;
+  margin-bottom: 1em;
+  margin-left: 2em;
+}
+
+.cards .cards_item .card .card_content .btn:hover {
+  background-color: rgb(119, 131, 143);
+  color: aliceblue;
+}
+
+h1 {
+  margin: 0px;
+  font-size: 2em;
+  color: rgb(255, 208, 0);
+}
+h3 {
+  font-size: 0.8em;
+  margin: 0px;
+  color: rgb(255, 255, 255);
+}
+h2 {
+  font-size: 1.4em;
+  margin: 0px;
+  color: rgb(197, 192, 192);
+}
+
+@media only screen and (max-width: 400px) {
+  .cards .cards_item .card {
+    width: 300px;
+  }
+}
+.select {
+  color: green;
+  margin: 10px;
+  text-align: center;
+  background-color: rgb(241, 241, 241);
+}
+.nav {
+  color: grey;
+  /* width: 100px;
+    height: 50px; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  /* margin: 10px; */
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+
+  margin: 10px;
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: 700;
+  position: relative;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 0 10px rgb(145, 145, 145);
+  box-shadow: 0 0 10px rgb(145, 145, 145);
+}
+.nav::before,
+.nav::after {
+  box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.draw {
+  transition: color 0.25s;
+  background-color: #fff;
+}
+.draw::before,
+.draw::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+.draw::before {
+  top: 0;
+  left: 0;
+}
+.draw::after {
+  bottom: 0;
+  right: 0;
+}
+.draw:hover {
+  color: #09e766;
+}
+.draw:hover::before,
+.draw:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.draw:hover::before {
+  border-top-color: #09e766;
+  border-right-color: #09e766;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.draw:hover::after {
+  border-bottom-color: #09e766;
+  border-left-color: #09e766;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+    height 0.25s ease-out 0.75s;
+}
+.current {
+  background-color: green;
+  color: whitesmoke;
+  border-radius: 4px;
+}
+.selection {
+  background-color: rgb(241, 241, 241);
+}
