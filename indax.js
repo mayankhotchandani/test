@@ -106,6 +106,17 @@ var trivia = [
     correctAnswer: "a",
   },
 ];
+var countdownNumberEl = document.getElementById("countdown-number");
+var countdown = 20;
+
+countdownNumberEl.textContent = countdown;
+
+setInterval(function () {
+  countdown = --countdown <= 0 ? 20 : countdown;
+
+  countdownNumberEl.textContent = countdown;
+}, 1000);
+
 // Starting Countdown Functions
 var startTime = 5;
 function initCounter() {
@@ -133,7 +144,7 @@ $(".answer").click(function () {
 function initGame() {
   $("#welcome").hide();
   $("#replaceStr").removeClass("hidden");
-  $("#removeStr").hide();
+  $("#removeStr").hide().fadeIn();
   var gameTime = 21; //21 for production
   var currentQuestion = 0;
   var numIncorrect = 0;
@@ -142,6 +153,7 @@ function initGame() {
   var restarted = false;
   $("#next-btn").click(function () {
     gameTime = 1;
+
     return gameTime;
   });
 
@@ -152,7 +164,6 @@ function initGame() {
     var questionArea = $("#question");
     var answerChoices = $("#choices");
     gameTime--;
-
     // Updates the DOM for each question
     $(".game-timer").text(parseInt(gameTime));
     $("#question-num").html(
@@ -163,7 +174,7 @@ function initGame() {
       $("#" + i).text(i + " : " + val);
     });
     $("#" + correctAnswer).addClass("correct");
-    $("#game").show("slow");
+    $("#game").fadeIn("slow");
 
     function showResults() {
       var score = numCorrect * 10;
@@ -175,7 +186,7 @@ function initGame() {
 
     var selected = $(".selected");
     if (gameTime === 0 && currentQuestion === 9) {
-      $("#game").hide();
+      $("#game").slideUp();
       if (selected.hasClass("correct")) {
         numCorrect++;
       } else {
@@ -185,7 +196,7 @@ function initGame() {
       clearInterval(gameTimer);
     } else if (gameTime === 0 && currentQuestion !== 9) {
       gameTime += 21; //21 for finished
-      $("#game").hide("slow");
+      $("#game").fadeOut("fast");
       $(".answer").removeClass("selected");
       if (selected.hasClass("correct")) {
         numCorrect++;
@@ -208,14 +219,3 @@ function nextQuestion() {
   return (gameTime = 0);
 }
 // add a button that fires this function in the results div
-
-var countdownNumberEl = document.getElementById("countdown-number");
-var countdown = 20;
-
-countdownNumberEl.textContent = countdown;
-
-setInterval(function () {
-  countdown = --countdown <= 0 ? 20 : countdown;
-
-  countdownNumberEl.textContent = countdown;
-}, 1000);

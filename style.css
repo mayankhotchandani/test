@@ -40,6 +40,10 @@ html {
 #D {
   color: black;
 }
+.timer {
+  text-align: center;
+  font-size: xx-large;
+}
 
 #question-num,
 .inline-time {
@@ -60,7 +64,7 @@ html {
   box-sizing: border-box;
 
   color: #000000;
-  height: 64vh;
+  height: 100vh;
   width: 100vw;
 
   margin: 0px;
@@ -101,6 +105,7 @@ html {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  font-size: x-large;
 }
 .game-timer {
   position: absolute;
@@ -176,6 +181,9 @@ html {
   -webkit-box-shadow: 0 0 5px 5pxrgb (197, 194, 194);
   box-shadow: 0 0 5px 5px rgb(197, 194, 194);
   margin-top: 14px;
+}
+.resuly-section {
+  font-size: 25px;
 }
 @media only screen and (max-width: 600px) {
   .ques-num {
