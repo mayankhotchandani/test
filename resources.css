@@ -18,6 +18,11 @@ img {
   width: 100%;
   align-items: center;
 }
+.info {
+  display: none;
+  margin: 0 4%;
+  display: flex;
+}
 
 .cards {
   display: flex;
@@ -75,6 +80,7 @@ img {
   line-height: 1.44;
   font-weight: 400;
   padding: 8px;
+  /* letter-spacing: 0.3px; */
   text-align: start;
 }
 
@@ -98,73 +104,29 @@ img {
   color: aliceblue;
 }
 
-.cards .cards_item .card .card_content .chapter {
+.cards .cards_item .card .card_content .chapter1 {
   margin: 0px;
   font-size: 2em;
   color: rgb(255, 208, 0);
-}
-.cards .cards_item .card .card_content .description {
-  font-size: 0.8em;
-  margin: 0px;
-  color: rgb(255, 255, 255);
 }
 .cards .cards_item .card .card_content .chapter-name {
   font-size: 1.4em;
   margin: 0px;
   color: rgb(197, 192, 192);
 }
+.cards .cards_item .card .card_content .description {
+  font-size: 0.8em;
+  margin: 0px;
+  color: rgb(255, 255, 255);
+}
 
 @media only screen and (max-width: 400px) {
   .cards .cards_item .card {
     width: 300px;
   }
-}
-.nav-tabs {
-  width: 80vw;
-  margin: 0px 10vw;
-  display: flex;
-  box-sizing: border-box;
-
-  overflow-x: auto;
-}
-.nav-tabs::-webkit-scrollbar {
-  display: none;
-}
-
-.nav-tabs .nav {
-  color: grey;
-  /* width: 100px;
-    height: 50px; */
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  padding: 10px;
-  /* margin: 10px; */
-  background: rgb(255, 254, 254);
-  text-decoration: none;
-}
-
-.m {
-  visibility: hidden;
-  width: 1px;
-}
-.selection .select .swipe {
-  float: right;
-  color: grey;
-}
-@media only screen and (min-width: 500px) {
-  .swipe {
-    display: none;
+  .cards {
+    margin: 0px auto;
   }
-  .nav-tabs {
-    justify-content: space-evenly;
-  }
-}
-.info {
-  display: none;
-  margin: 0 4%;
-  display: flex;
 }
 .selection {
   background-color: rgb(241, 241, 241);
@@ -175,7 +137,26 @@ img {
   text-align: center;
   background-color: rgb(241, 241, 241);
 }
-.selection .nav {
+.selection .nav-tabs {
+  width: 80vw;
+  margin: 0px 10vw;
+  display: flex;
+  box-sizing: border-box;
+
+  overflow-x: auto;
+}
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+.m {
+  visibility: hidden;
+  width: 1px;
+}
+.swipe {
+  float: right;
+  color: grey;
+}
+.nav {
   color: grey;
   display: flex;
   justify-content: center;
@@ -244,4 +225,12 @@ img {
   background-color: green;
   color: whitesmoke;
   border-radius: 4px;
+}
+@media only screen and (min-width: 500px) {
+  .swipe {
+    display: none;
+  }
+  .nav-tabs {
+    justify-content: space-evenly;
+  }
 }
