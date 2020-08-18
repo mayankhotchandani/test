@@ -10,7 +10,7 @@ html {
   background-size: 100% 40%;
   color: aliceblue;
 }
-.welcome {
+#welcome {
   width: 100%;
 }
 .hidden {
@@ -22,27 +22,18 @@ html {
 .title {
   text-align: center;
 }
-#next-btn {
-  height: 40px;
-  margin-bottom: 25px;
-  margin-right: 25px;
-  border: 2px solid green;
-  float: right;
-  outline: none;
-  width: auto;
-  border-radius: 4px;
-  background-color: white;
-  font-size: larger;
-}
-#A,
-#B,
-#C,
-#D {
-  color: black;
-}
-.timer {
+
+#welcome .timer {
   text-align: center;
   font-size: xx-large;
+}
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: x-large;
 }
 
 #question-num,
@@ -69,7 +60,7 @@ html {
 
   margin: 0px;
 }
-.game-top {
+#game .game-top {
   width: 100%;
   border-radius: 4px;
   background-color: white;
@@ -83,7 +74,17 @@ html {
   box-shadow: 0 0 5px 5px rgb(197, 194, 194);
 }
 
-#question {
+#game .lower {
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 85vw;
+  margin: 0px auto;
+  -moz-box-shadow: 0 0 5px 5px rgb(197, 194, 194);
+  -webkit-box-shadow: 0 0 5px 5pxrgb (197, 194, 194);
+  box-shadow: 0 0 5px 5px rgb(197, 194, 194);
+  margin-top: 14px;
+}
+.lower #question {
   padding: 5px;
   background: rgb(255, 252, 252);
   border-radius: 4px;
@@ -95,61 +96,6 @@ html {
   font-size: 2rem;
   box-sizing: border-box;
 }
-
-#results {
-  text-align: center;
-}
-.description {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  font-size: x-large;
-}
-.game-timer {
-  position: absolute;
-  top: 36vh;
-  font-size: 1.6em;
-  margin-top: 4px;
-  font-weight: bold;
-}
-
-.opt {
-  width: 30px;
-  height: 30px;
-  background: #fff;
-  display: flex;
-  margin: 5px;
-  border: 1px solid black;
-  border-radius: 50%;
-}
-.opt:hover {
-  width: 30px;
-  height: 30px;
-  background: #fff;
-  box-sizing: border-box;
-  border: 4px solid rgb(39, 89, 207);
-}
-.selected {
-  width: 30px;
-  height: 30px;
-  background: url(https://image.flaticon.com/icons/svg/992/992481.svg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 5px;
-}
-.selected:hover {
-  width: 30px;
-  height: 30px;
-  background: url(https://image.flaticon.com/icons/svg/992/992481.svg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 5px;
-}
-
 .option-display {
   display: flex;
   align-items: center;
@@ -161,6 +107,47 @@ html {
   font-size: 2em;
   border-top: 1px solid black;
 }
+.option-display #A,
+.option-display #B,
+.option-display #C,
+.option-display #D {
+  color: black;
+}
+.option-display .opt {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  display: flex;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.option-display .opt:hover {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  box-sizing: border-box;
+  border: 4px solid rgb(39, 89, 207);
+}
+.option-display .selected {
+  width: 30px;
+  height: 30px;
+  background: url(https://image.flaticon.com/icons/svg/992/992481.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px;
+}
+.option-display .selected:hover {
+  width: 30px;
+  height: 30px;
+  background: url(https://image.flaticon.com/icons/svg/992/992481.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px;
+}
+
 .ques-num {
   margin-left: 145%;
   padding-bottom: 20px;
@@ -168,39 +155,16 @@ html {
   width: 300px;
   font-size: 3em;
 }
+.game-timer {
+  position: absolute;
+  top: 36vh;
+  font-size: 1.6em;
+  margin-top: 4px;
+  font-weight: bold;
+}
 .time {
   font-size: 1.2em;
   margin-left: 6px;
-}
-.lower {
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 85vw;
-  margin: 0px auto;
-  -moz-box-shadow: 0 0 5px 5px rgb(197, 194, 194);
-  -webkit-box-shadow: 0 0 5px 5pxrgb (197, 194, 194);
-  box-shadow: 0 0 5px 5px rgb(197, 194, 194);
-  margin-top: 14px;
-}
-.resuly-section {
-  font-size: 25px;
-}
-@media only screen and (max-width: 600px) {
-  .ques-num {
-    margin-left: 34%;
-    width: 190px;
-    font-size: 1.6em;
-  }
-  .time {
-    font-size: 1.4em;
-  }
-
-  #question {
-    font-size: 1.2rem;
-  }
-  .option-display {
-    font-size: 1em;
-  }
 }
 
 #countdown {
@@ -212,7 +176,7 @@ html {
   text-align: center;
 }
 
-#countdown-number {
+#countdown #countdown-number {
   color: transparent;
   display: inline-block;
   line-height: 40px;
@@ -235,6 +199,39 @@ svg circle {
   stroke: rgb(13, 201, 69);
   fill: none;
   animation: countdown 20s linear infinite forwards;
+}
+#next-btn {
+  height: 40px;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  border: 2px solid green;
+  float: right;
+  outline: none;
+  width: auto;
+  border-radius: 4px;
+  background-color: white;
+  font-size: larger;
+}
+#results {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .ques-num {
+    margin-left: 34%;
+    width: 190px;
+    font-size: 1.6em;
+  }
+  .time {
+    font-size: 1.4em;
+  }
+
+  #question {
+    font-size: 1.2rem;
+  }
+  .option-display {
+    font-size: 1em;
+  }
 }
 
 @keyframes countdown {
