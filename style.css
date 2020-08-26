@@ -226,11 +226,22 @@ svg circle {
     font-size: 1.4em;
   }
 
-  #question {
-    font-size: 1.2rem;
+  .lower #question {
+    font-size: 1rem;
+    height: 14vh;
   }
   .option-display {
     font-size: 1em;
+    height: 7vh;
+  }
+  svg {
+    top: -12px;
+  }
+  .game-timer {
+    top: 38vh;
+  }
+  #game .game-top {
+    height: 13vh;
   }
 }
 
