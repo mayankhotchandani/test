@@ -9,6 +9,8 @@ html {
   background-size: cover;
   background-size: 100% 40%;
   color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
+
 }
 #welcome {
   width: 100%;
@@ -20,7 +22,9 @@ html {
   display: inline;
 }
 .title {
-  text-align: center;
+  text-align: left ;
+
+
 }
 
 #welcome .timer {
@@ -29,11 +33,22 @@ html {
 }
 .description {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  position:static;
+  justify-content: left;
+  align-items: left;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   font-size: x-large;
+  background-color: white;
+  margin-left:290px;
+  margin-right: 290px;
+  margin-top: 220px;
+  line-height: 20px;
+  color: black;
+  box-sizing: border-box;
+  box-shadow: 0 0 2px;
+  padding:15px;
+  font-size: 22px;
 }
 
 #question-num,
@@ -48,8 +63,9 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px;
-  padding-top: 5px;
+  margin-right: 10px;
+  margin-top: 1px;
+  padding-top: 10px;
 }
 #game {
   box-sizing: border-box;
@@ -71,7 +87,8 @@ html {
   box-sizing: border-box;
   -moz-box-shadow: 0 0 5px 5px rgb(197, 194, 194);
   -webkit-box-shadow: 0 0 5px 5px rgb(197, 194, 194);
-  box-shadow: 0 0 5px 5px rgb(197, 194, 194);
+  box-shadow: 0 0 3px 3px rgb(197, 194, 194);
+  font-size: 0.9rem;
 }
 
 #game .lower {
@@ -81,30 +98,35 @@ html {
   margin: 0px auto;
   -moz-box-shadow: 0 0 5px 5px rgb(197, 194, 194);
   -webkit-box-shadow: 0 0 5px 5pxrgb (197, 194, 194);
-  box-shadow: 0 0 5px 5px rgb(197, 194, 194);
+  box-shadow: 0 0 3px 3px rgb(197, 194, 194);
   margin-top: 14px;
 }
+
 .lower #question {
   padding: 5px;
   background: rgb(255, 252, 252);
   border-radius: 4px;
   color: black;
-  height: 16vh;
+  height: 14vh;
   width: 85vw;
   margin: 0px auto;
-
-  font-size: 2rem;
+  padding-left: 20px;
+  font-size: 1.6rem;
   box-sizing: border-box;
+    padding-top:5vh;
 }
+
 .option-display {
   display: flex;
-  align-items: center;
+  align-items: left;
   flex-direction: row;
   margin: 0px auto;
   height: 8vh;
   width: 85vw;
   box-sizing: border-box;
-  font-size: 2em;
+  font-size: 1.5em;
+    padding-top:1.7vh;
+    padding-left: 1.5vh;
   border-top: 1px solid black;
 }
 .option-display #A,
@@ -121,6 +143,7 @@ html {
   margin: 5px;
   border: 1px solid black;
   border-radius: 50%;
+
 }
 .option-display .opt:hover {
   width: 30px;
@@ -149,29 +172,30 @@ html {
 }
 
 .ques-num {
-  margin-left: 145%;
-  padding-bottom: 20px;
+  margin-left: 6%;
+  padding-bottom: 18px;
   box-sizing: border-box;
   width: 300px;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .game-timer {
   position: absolute;
-  top: 36vh;
+  top: 26vh;
   font-size: 1.6em;
   margin-top: 4px;
   font-weight: bold;
 }
 .time {
-  font-size: 1.2em;
+  font-size: 1.0em;
   margin-left: 6px;
+  margin-top: 2px;
 }
 
 #countdown {
   position: relative;
   margin: auto;
-
-  height: 70px;
+  margin-top: 5px;
+  height: 150px;
   width: 70px;
   text-align: center;
 }
@@ -180,14 +204,15 @@ html {
   color: transparent;
   display: inline-block;
   line-height: 40px;
+
 }
 
 svg {
   position: absolute;
   top: 0;
   right: 0;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   transform: rotateY(-180deg) rotateZ(-90deg);
 }
 
@@ -195,15 +220,16 @@ svg circle {
   stroke-dasharray: 156px;
   stroke-dashoffset: 0px;
   stroke-linecap: round;
-  stroke-width: 2px;
+  stroke-width: 4px;
   stroke: rgb(13, 201, 69);
   fill: none;
   animation: countdown 20s linear infinite forwards;
+
 }
 #next-btn {
   height: 40px;
   margin-bottom: 25px;
-  margin-right: 25px;
+  margin-right: 113px;
   border: 2px solid green;
   float: right;
   outline: none;
@@ -211,38 +237,79 @@ svg circle {
   border-radius: 4px;
   background-color: white;
   font-size: larger;
+
+}
+
+#start-btn {
+  background-color: green;
+  color: white;
+  margin-left: 50vh;
+  align-content: center;
+  border-radius: 5px;
+  width:90px;
+  margin-top:10px;
+  padding:5px;
+  font-weight: bold;
+  font-size: 15px;
+
 }
 #results {
   text-align: center;
+  background-color: aliceblue;
+  padding: 15px;
+  color: black;
+  margin-left: 400px;
+  margin-right:400px;
+  margin-top:240px;
+  height:150px;
+  box-sizing: border-box;
+  box-shadow: 0 0 3px 3px rgb(197, 194, 194);
 }
 
 @media only screen and (max-width: 600px) {
+  .description{
+    font-size: 0.8em;
+    width:450px;
+    margin-left: 35px;
+    height: 180px;
+    line-height: 15px;
+  }
   .ques-num {
-    margin-left: 34%;
+    margin-left: 20%;
     width: 190px;
-    font-size: 1.6em;
+    font-size: 2.2em;
   }
   .time {
     font-size: 1.4em;
   }
 
   .lower #question {
-    font-size: 1rem;
+    font-size: 1.0rem;
     height: 14vh;
   }
   .option-display {
-    font-size: 1em;
-    height: 7vh;
+    font-size: 0.9em;
+    height: 8vh;
   }
   svg {
-    top: -12px;
+    top: 8px;
   }
   .game-timer {
+    margin-top: -8vh;
     top: 38vh;
   }
-  #game .game-top {
-    height: 13vh;
+  #results{
+    width:350px;
+    margin-left: 80px;
   }
+
+  #game .game-top {
+    height: 17vh;
+  }
+  #next-btn{
+    margin-right: 10em;
+  }
+
 }
 
 @keyframes countdown {

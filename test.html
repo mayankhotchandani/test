@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Chapter-1 Electronics</h1>
-        <hr>
-        
+
+
+
         <div id="welcome">
-          
-             
           <p class="timer hidden">
             Get Ready:
-            <span class="first-timer">5</span>
-            <div id="intro" class="row center-block">
-              <div class="description">
-                <p>You will be Alloted 20 secs for each question . There are 10 questions in total .</p>
-                <div>Difficulty:Medium</div>
-              </div>
-              
-              <div class="description">
-                <button onclick="initCounter()" id="start-btn">Start</button>
-              </div>
+           <span class="first-timer">5</span>
+           <div class="description">
+
+                 <h2 class="title">Chapter-1:Electronics</h2>
+                    <p>You will be Alloted 20 secs for each question . There are 10 questions in total .</p>
+                      <div>Difficulty:Medium</div>
+                        <button onclick="initCounter()" id="start-btn">Start</button>
+                      </div>
+
+
             </div>
           </p>
         </div>
@@ -41,11 +40,11 @@
                   <circle class="circle" r="25" cx="35" cy="35"></circle>
                 </svg>
               </div>
-                
-              
+
+
                 <div class="game-timer">20</div>
-             
-              
+
+
             </div>
           </div>
           <div class="lower">
@@ -70,16 +69,16 @@
           </div>
           </div>
           <br>
-      
+
           <div class="row">
-            
+
               <button class="next" id="next-btn">Next Question</button>
-           
+
             <div class="col-sm-6">
                       <!-- <button class="btn btn-warning btn-block pull-right" id="restart-btn" onclick="restartGame()">Restart</button> -->
             </div>
           </div>
-      
+
         </div>
         <div class="hidden" id="result-section">
           <div id="results">
