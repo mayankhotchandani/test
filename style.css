@@ -1,4 +1,4 @@
-body {
+ body {
   margin: 0px;
 }
 html {
@@ -136,8 +136,8 @@ html {
   color: black;
 }
 .option-display .opt {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: #fff;
   display: flex;
   margin: 5px;
@@ -146,15 +146,15 @@ html {
 
 }
 .option-display .opt:hover {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: #fff;
   box-sizing: border-box;
   border: 4px solid rgb(39, 89, 207);
 }
 .option-display .selected {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: url(https://image.flaticon.com/icons/svg/992/992481.svg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
